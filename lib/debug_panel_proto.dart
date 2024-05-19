@@ -1,4 +1,4 @@
-library debug_proto;
+library debug_panel_proto;
 
 export 'package:protobuf/protobuf.dart';
 export 'protos/schema.pb.dart';
