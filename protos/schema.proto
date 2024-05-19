@@ -1,0 +1,74 @@
+syntax = "proto3";
+package schema;
+
+message DebugDataField {
+  enum ParamType {
+    INT = 0;
+    DOUBLE = 1;
+    STRING = 2;
+    BOOL = 3;
+    DATE_TIME = 4;
+    DATE_TIME_RANGE = 5;
+    LAT_LNG = 6;
+    COLOR = 7;
+    FF_PLACE = 8;
+    FF_UPLOADED_FILE = 9;
+    JSON = 10;
+    DATA_STRUCT = 11;
+    ENUM = 12;
+    DOCUMENT_REFERENCE = 13;
+    DOCUMENT = 14;
+    SUPABASE_ROW = 15;
+    POSTGRES_ROW = 16;
+    SQLITE_ROW = 17;
+  }
+  ParamType type = 1;
+  oneof data {
+    string serialized_value = 2;
+    ListDebugDataField list_value = 3;
+    MapDebugDataField map_value = 4;
+  }
+  string link = 5;
+  string widget_class_name = 6;
+  bool nullable = 7;
+}
+
+message ListDebugDataField {
+  repeated DebugDataField values = 1;
+}
+
+message MapDebugDataField {
+  map<string, DebugDataField> values = 1;
+}
+
+message GlobalPropertyDebugData {
+  map<string, DebugDataField> values = 1;
+}
+
+message AppStateDebugData {
+  map<string, DebugDataField> values = 1;
+  string link = 2;
+}
+
+message AppConstantDebugData {
+  map<string, DebugDataField> values = 1;
+  string link = 2;
+}
+
+message AuthenticatedUserDebugData {
+  map<string, DebugDataField> values = 1;
+}
+
+message WidgetClassDebugData {
+  map<string, DebugDataField> local_states = 1;
+  map<string, DebugDataField> widget_states = 2;
+  map<string, DebugDataField> widget_parameters = 3;
+  map<string, DebugDataField> action_outputs = 4;
+  map<string, WidgetClassDebugData> component_states = 5;
+  map<string, DynamicWidgetClassDebugData> dynamic_component_states = 6;
+  string link = 7;
+}
+
+message DynamicWidgetClassDebugData {
+  map<string, WidgetClassDebugData> component_states = 5;
+}
