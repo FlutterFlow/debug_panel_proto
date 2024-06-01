@@ -1,3 +1,7 @@
+## 0.0.4
+
+Update to protobuf 3 
+
 ## 0.0.3
 
 Fix naming bug

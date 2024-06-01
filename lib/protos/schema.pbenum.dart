@@ -1,37 +1,33 @@
-//
+///
 //  Generated code. Do not modify.
 //  source: protos/schema.proto
 //
 // @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
-
+// ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
-
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class DebugDataField_ParamType extends $pb.ProtobufEnum {
-  static const DebugDataField_ParamType INT = DebugDataField_ParamType._(0, _omitEnumNames ? '' : 'INT');
-  static const DebugDataField_ParamType DOUBLE = DebugDataField_ParamType._(1, _omitEnumNames ? '' : 'DOUBLE');
-  static const DebugDataField_ParamType STRING = DebugDataField_ParamType._(2, _omitEnumNames ? '' : 'STRING');
-  static const DebugDataField_ParamType BOOL = DebugDataField_ParamType._(3, _omitEnumNames ? '' : 'BOOL');
-  static const DebugDataField_ParamType DATE_TIME = DebugDataField_ParamType._(4, _omitEnumNames ? '' : 'DATE_TIME');
-  static const DebugDataField_ParamType DATE_TIME_RANGE = DebugDataField_ParamType._(5, _omitEnumNames ? '' : 'DATE_TIME_RANGE');
-  static const DebugDataField_ParamType LAT_LNG = DebugDataField_ParamType._(6, _omitEnumNames ? '' : 'LAT_LNG');
-  static const DebugDataField_ParamType COLOR = DebugDataField_ParamType._(7, _omitEnumNames ? '' : 'COLOR');
-  static const DebugDataField_ParamType FF_PLACE = DebugDataField_ParamType._(8, _omitEnumNames ? '' : 'FF_PLACE');
-  static const DebugDataField_ParamType FF_UPLOADED_FILE = DebugDataField_ParamType._(9, _omitEnumNames ? '' : 'FF_UPLOADED_FILE');
-  static const DebugDataField_ParamType JSON = DebugDataField_ParamType._(10, _omitEnumNames ? '' : 'JSON');
-  static const DebugDataField_ParamType DATA_STRUCT = DebugDataField_ParamType._(11, _omitEnumNames ? '' : 'DATA_STRUCT');
-  static const DebugDataField_ParamType ENUM = DebugDataField_ParamType._(12, _omitEnumNames ? '' : 'ENUM');
-  static const DebugDataField_ParamType DOCUMENT_REFERENCE = DebugDataField_ParamType._(13, _omitEnumNames ? '' : 'DOCUMENT_REFERENCE');
-  static const DebugDataField_ParamType DOCUMENT = DebugDataField_ParamType._(14, _omitEnumNames ? '' : 'DOCUMENT');
-  static const DebugDataField_ParamType SUPABASE_ROW = DebugDataField_ParamType._(15, _omitEnumNames ? '' : 'SUPABASE_ROW');
-  static const DebugDataField_ParamType POSTGRES_ROW = DebugDataField_ParamType._(16, _omitEnumNames ? '' : 'POSTGRES_ROW');
-  static const DebugDataField_ParamType SQLITE_ROW = DebugDataField_ParamType._(17, _omitEnumNames ? '' : 'SQLITE_ROW');
+  static const DebugDataField_ParamType INT = DebugDataField_ParamType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'INT');
+  static const DebugDataField_ParamType DOUBLE = DebugDataField_ParamType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DOUBLE');
+  static const DebugDataField_ParamType STRING = DebugDataField_ParamType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'STRING');
+  static const DebugDataField_ParamType BOOL = DebugDataField_ParamType._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'BOOL');
+  static const DebugDataField_ParamType DATE_TIME = DebugDataField_ParamType._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DATE_TIME');
+  static const DebugDataField_ParamType DATE_TIME_RANGE = DebugDataField_ParamType._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DATE_TIME_RANGE');
+  static const DebugDataField_ParamType LAT_LNG = DebugDataField_ParamType._(6, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'LAT_LNG');
+  static const DebugDataField_ParamType COLOR = DebugDataField_ParamType._(7, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COLOR');
+  static const DebugDataField_ParamType FF_PLACE = DebugDataField_ParamType._(8, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'FF_PLACE');
+  static const DebugDataField_ParamType FF_UPLOADED_FILE = DebugDataField_ParamType._(9, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'FF_UPLOADED_FILE');
+  static const DebugDataField_ParamType JSON = DebugDataField_ParamType._(10, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'JSON');
+  static const DebugDataField_ParamType DATA_STRUCT = DebugDataField_ParamType._(11, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DATA_STRUCT');
+  static const DebugDataField_ParamType ENUM = DebugDataField_ParamType._(12, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ENUM');
+  static const DebugDataField_ParamType DOCUMENT_REFERENCE = DebugDataField_ParamType._(13, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DOCUMENT_REFERENCE');
+  static const DebugDataField_ParamType DOCUMENT = DebugDataField_ParamType._(14, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DOCUMENT');
+  static const DebugDataField_ParamType SUPABASE_ROW = DebugDataField_ParamType._(15, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SUPABASE_ROW');
+  static const DebugDataField_ParamType POSTGRES_ROW = DebugDataField_ParamType._(16, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'POSTGRES_ROW');
+  static const DebugDataField_ParamType SQLITE_ROW = DebugDataField_ParamType._(17, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SQLITE_ROW');
 
   static const $core.List<DebugDataField_ParamType> values = <DebugDataField_ParamType> [
     INT,
@@ -60,5 +56,3 @@ class DebugDataField_ParamType extends $pb.ProtobufEnum {
   const DebugDataField_ParamType._($core.int v, $core.String n) : super(v, n);
 }
 
-
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
