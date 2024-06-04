@@ -29,8 +29,9 @@ message DebugDataField {
     MapDebugDataField map_value = 4;
   }
   string link = 5;
-  string widget_class_name = 6;
+  string name = 6;
   bool nullable = 7;
+  bool has_field = 8;
 }
 
 message ListDebugDataField {
@@ -67,6 +68,7 @@ message WidgetClassDebugData {
   map<string, WidgetClassDebugData> component_states = 5;
   map<string, DynamicWidgetClassDebugData> dynamic_component_states = 6;
   string link = 7;
+  string widget_class_name = 8;
 }
 
 message DynamicWidgetClassDebugData {

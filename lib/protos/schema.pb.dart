@@ -34,8 +34,9 @@ class DebugDataField extends $pb.GeneratedMessage {
     ..aOM<ListDebugDataField>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'listValue', subBuilder: ListDebugDataField.create)
     ..aOM<MapDebugDataField>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapValue', subBuilder: MapDebugDataField.create)
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetClassName')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nullable')
+    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasField')
     ..hasRequiredFields = false
   ;
 
@@ -46,8 +47,9 @@ class DebugDataField extends $pb.GeneratedMessage {
     ListDebugDataField? listValue,
     MapDebugDataField? mapValue,
     $core.String? link,
-    $core.String? widgetClassName,
+    $core.String? name,
     $core.bool? nullable,
+    $core.bool? hasField_8,
   }) {
     final _result = create();
     if (type != null) {
@@ -65,11 +67,14 @@ class DebugDataField extends $pb.GeneratedMessage {
     if (link != null) {
       _result.link = link;
     }
-    if (widgetClassName != null) {
-      _result.widgetClassName = widgetClassName;
+    if (name != null) {
+      _result.name = name;
     }
     if (nullable != null) {
       _result.nullable = nullable;
+    }
+    if (hasField_8 != null) {
+      _result.hasField_8 = hasField_8;
     }
     return _result;
   }
@@ -147,13 +152,13 @@ class DebugDataField extends $pb.GeneratedMessage {
   void clearLink() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get widgetClassName => $_getSZ(5);
+  $core.String get name => $_getSZ(5);
   @$pb.TagNumber(6)
-  set widgetClassName($core.String v) { $_setString(5, v); }
+  set name($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasWidgetClassName() => $_has(5);
+  $core.bool hasName() => $_has(5);
   @$pb.TagNumber(6)
-  void clearWidgetClassName() => clearField(6);
+  void clearName() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.bool get nullable => $_getBF(6);
@@ -163,6 +168,15 @@ class DebugDataField extends $pb.GeneratedMessage {
   $core.bool hasNullable() => $_has(6);
   @$pb.TagNumber(7)
   void clearNullable() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get hasField_8 => $_getBF(7);
+  @$pb.TagNumber(8)
+  set hasField_8($core.bool v) { $_setBool(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasHasField_8() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearHasField_8() => clearField(8);
 }
 
 class ListDebugDataField extends $pb.GeneratedMessage {
@@ -448,6 +462,7 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     ..m<$core.String, WidgetClassDebugData>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'componentStates', entryClassName: 'WidgetClassDebugData.ComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: WidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
     ..m<$core.String, DynamicWidgetClassDebugData>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dynamicComponentStates', entryClassName: 'WidgetClassDebugData.DynamicComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DynamicWidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
     ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetClassName')
     ..hasRequiredFields = false
   ;
 
@@ -460,6 +475,7 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     $core.Map<$core.String, WidgetClassDebugData>? componentStates,
     $core.Map<$core.String, DynamicWidgetClassDebugData>? dynamicComponentStates,
     $core.String? link,
+    $core.String? widgetClassName,
   }) {
     final _result = create();
     if (localStates != null) {
@@ -482,6 +498,9 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     }
     if (link != null) {
       _result.link = link;
+    }
+    if (widgetClassName != null) {
+      _result.widgetClassName = widgetClassName;
     }
     return _result;
   }
@@ -532,6 +551,15 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
   $core.bool hasLink() => $_has(6);
   @$pb.TagNumber(7)
   void clearLink() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get widgetClassName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set widgetClassName($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasWidgetClassName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearWidgetClassName() => clearField(8);
 }
 
 class DynamicWidgetClassDebugData extends $pb.GeneratedMessage {

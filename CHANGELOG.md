@@ -1,3 +1,7 @@
+## 0.0.5
+
+Small refactor
+
 ## 0.0.4
 
 Update to protobuf 3 
