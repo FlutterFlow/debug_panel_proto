@@ -603,3 +603,558 @@ class DynamicWidgetClassDebugData extends $pb.GeneratedMessage {
   $core.Map<$core.String, WidgetClassDebugData> get componentStates => $_getMap(0);
 }
 
+enum ActionContext_Context {
+  nodeIdentifier, 
+  componentIdentifier, 
+  actionCallbackIdentifier, 
+  notSet
+}
+
+class ActionContext extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ActionContext_Context> _ActionContext_ContextByTag = {
+    1 : ActionContext_Context.nodeIdentifier,
+    2 : ActionContext_Context.componentIdentifier,
+    3 : ActionContext_Context.actionCallbackIdentifier,
+    0 : ActionContext_Context.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ActionContext', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3])
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nodeIdentifier')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'componentIdentifier')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'actionCallbackIdentifier')
+    ..hasRequiredFields = false
+  ;
+
+  ActionContext._() : super();
+  factory ActionContext({
+    $core.String? nodeIdentifier,
+    $core.String? componentIdentifier,
+    $core.String? actionCallbackIdentifier,
+  }) {
+    final _result = create();
+    if (nodeIdentifier != null) {
+      _result.nodeIdentifier = nodeIdentifier;
+    }
+    if (componentIdentifier != null) {
+      _result.componentIdentifier = componentIdentifier;
+    }
+    if (actionCallbackIdentifier != null) {
+      _result.actionCallbackIdentifier = actionCallbackIdentifier;
+    }
+    return _result;
+  }
+  factory ActionContext.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ActionContext.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ActionContext clone() => ActionContext()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ActionContext copyWith(void Function(ActionContext) updates) => super.copyWith((message) => updates(message as ActionContext)) as ActionContext; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ActionContext create() => ActionContext._();
+  ActionContext createEmptyInstance() => create();
+  static $pb.PbList<ActionContext> createRepeated() => $pb.PbList<ActionContext>();
+  @$core.pragma('dart2js:noInline')
+  static ActionContext getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionContext>(create);
+  static ActionContext? _defaultInstance;
+
+  ActionContext_Context whichContext() => _ActionContext_ContextByTag[$_whichOneof(0)]!;
+  void clearContext() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get nodeIdentifier => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set nodeIdentifier($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNodeIdentifier() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNodeIdentifier() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get componentIdentifier => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set componentIdentifier($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasComponentIdentifier() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearComponentIdentifier() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get actionCallbackIdentifier => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set actionCallbackIdentifier($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasActionCallbackIdentifier() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearActionCallbackIdentifier() => clearField(3);
+}
+
+class ActionDebugData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ActionDebugData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'category')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'summary')
+    ..aOM<ActionContext>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: ActionContext.create)
+    ..m<$core.String, DebugDataField>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputParams', entryClassName: 'ActionDebugData.InputParamsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
+    ..aOM<DebugDataField>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputParam', subBuilder: DebugDataField.create)
+    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..e<ActionStatus>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ActionStatus.ACTION_STATUS_UNSPECIFIED, valueOf: ActionStatus.valueOf, enumValues: ActionStatus.values)
+    ..a<$core.int>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', $pb.PbFieldType.O3)
+    ..aOS(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'comment')
+    ..aOS(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorMessage')
+    ..hasRequiredFields = false
+  ;
+
+  ActionDebugData._() : super();
+  factory ActionDebugData({
+    $core.String? identifier,
+    $core.String? name,
+    $core.String? category,
+    $core.String? summary,
+    ActionContext? context,
+    $core.Map<$core.String, DebugDataField>? inputParams,
+    DebugDataField? outputParam,
+    $core.int? timestamp,
+    ActionStatus? status,
+    $core.int? duration,
+    $core.String? comment,
+    $core.String? errorMessage,
+  }) {
+    final _result = create();
+    if (identifier != null) {
+      _result.identifier = identifier;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (category != null) {
+      _result.category = category;
+    }
+    if (summary != null) {
+      _result.summary = summary;
+    }
+    if (context != null) {
+      _result.context = context;
+    }
+    if (inputParams != null) {
+      _result.inputParams.addAll(inputParams);
+    }
+    if (outputParam != null) {
+      _result.outputParam = outputParam;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    if (duration != null) {
+      _result.duration = duration;
+    }
+    if (comment != null) {
+      _result.comment = comment;
+    }
+    if (errorMessage != null) {
+      _result.errorMessage = errorMessage;
+    }
+    return _result;
+  }
+  factory ActionDebugData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ActionDebugData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ActionDebugData clone() => ActionDebugData()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ActionDebugData copyWith(void Function(ActionDebugData) updates) => super.copyWith((message) => updates(message as ActionDebugData)) as ActionDebugData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ActionDebugData create() => ActionDebugData._();
+  ActionDebugData createEmptyInstance() => create();
+  static $pb.PbList<ActionDebugData> createRepeated() => $pb.PbList<ActionDebugData>();
+  @$core.pragma('dart2js:noInline')
+  static ActionDebugData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionDebugData>(create);
+  static ActionDebugData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get identifier => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set identifier($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIdentifier() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIdentifier() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get category => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set category($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCategory() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCategory() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get summary => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set summary($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSummary() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSummary() => clearField(4);
+
+  @$pb.TagNumber(5)
+  ActionContext get context => $_getN(4);
+  @$pb.TagNumber(5)
+  set context(ActionContext v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasContext() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearContext() => clearField(5);
+  @$pb.TagNumber(5)
+  ActionContext ensureContext() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.Map<$core.String, DebugDataField> get inputParams => $_getMap(5);
+
+  @$pb.TagNumber(7)
+  DebugDataField get outputParam => $_getN(6);
+  @$pb.TagNumber(7)
+  set outputParam(DebugDataField v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasOutputParam() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearOutputParam() => clearField(7);
+  @$pb.TagNumber(7)
+  DebugDataField ensureOutputParam() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $core.int get timestamp => $_getIZ(7);
+  @$pb.TagNumber(8)
+  set timestamp($core.int v) { $_setSignedInt32(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasTimestamp() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearTimestamp() => clearField(8);
+
+  @$pb.TagNumber(9)
+  ActionStatus get status => $_getN(8);
+  @$pb.TagNumber(9)
+  set status(ActionStatus v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasStatus() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearStatus() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.int get duration => $_getIZ(9);
+  @$pb.TagNumber(10)
+  set duration($core.int v) { $_setSignedInt32(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasDuration() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearDuration() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get comment => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set comment($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasComment() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearComment() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get errorMessage => $_getSZ(11);
+  @$pb.TagNumber(12)
+  set errorMessage($core.String v) { $_setString(11, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasErrorMessage() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearErrorMessage() => clearField(12);
+}
+
+class ActionFlowDebugData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ActionFlowDebugData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..e<ActionFlowType>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ActionFlowType.ACTION_FLOW_TYPE_UNSPECIFIED, valueOf: ActionFlowType.valueOf, enumValues: ActionFlowType.values)
+    ..aOM<ActionContext>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: ActionContext.create)
+    ..m<$core.String, DebugDataField>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputParams', entryClassName: 'ActionFlowDebugData.InputParamsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
+    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  ActionFlowDebugData._() : super();
+  factory ActionFlowDebugData({
+    $core.String? identifier,
+    $core.String? name,
+    ActionFlowType? type,
+    ActionContext? context,
+    $core.Map<$core.String, DebugDataField>? inputParams,
+    $core.int? timestamp,
+    $core.int? duration,
+  }) {
+    final _result = create();
+    if (identifier != null) {
+      _result.identifier = identifier;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    if (context != null) {
+      _result.context = context;
+    }
+    if (inputParams != null) {
+      _result.inputParams.addAll(inputParams);
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (duration != null) {
+      _result.duration = duration;
+    }
+    return _result;
+  }
+  factory ActionFlowDebugData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ActionFlowDebugData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ActionFlowDebugData clone() => ActionFlowDebugData()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ActionFlowDebugData copyWith(void Function(ActionFlowDebugData) updates) => super.copyWith((message) => updates(message as ActionFlowDebugData)) as ActionFlowDebugData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ActionFlowDebugData create() => ActionFlowDebugData._();
+  ActionFlowDebugData createEmptyInstance() => create();
+  static $pb.PbList<ActionFlowDebugData> createRepeated() => $pb.PbList<ActionFlowDebugData>();
+  @$core.pragma('dart2js:noInline')
+  static ActionFlowDebugData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionFlowDebugData>(create);
+  static ActionFlowDebugData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get identifier => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set identifier($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIdentifier() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIdentifier() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  ActionFlowType get type => $_getN(2);
+  @$pb.TagNumber(3)
+  set type(ActionFlowType v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearType() => clearField(3);
+
+  @$pb.TagNumber(4)
+  ActionContext get context => $_getN(3);
+  @$pb.TagNumber(4)
+  set context(ActionContext v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasContext() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearContext() => clearField(4);
+  @$pb.TagNumber(4)
+  ActionContext ensureContext() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.Map<$core.String, DebugDataField> get inputParams => $_getMap(4);
+
+  @$pb.TagNumber(6)
+  $core.int get timestamp => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set timestamp($core.int v) { $_setSignedInt32(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasTimestamp() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearTimestamp() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get duration => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set duration($core.int v) { $_setSignedInt32(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasDuration() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDuration() => clearField(7);
+}
+
+class ActionBlockDebugData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ActionBlockDebugData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier')
+    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentIdentifiers')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOM<ActionContext>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: ActionContext.create)
+    ..m<$core.String, DebugDataField>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputParams', entryClassName: 'ActionBlockDebugData.InputParamsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
+    ..aOM<DebugDataField>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputParam', subBuilder: DebugDataField.create)
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  ActionBlockDebugData._() : super();
+  factory ActionBlockDebugData({
+    $core.String? identifier,
+    $core.Iterable<$core.String>? parentIdentifiers,
+    $core.String? name,
+    ActionContext? context,
+    $core.Map<$core.String, DebugDataField>? inputParams,
+    DebugDataField? outputParam,
+    $core.int? timestamp,
+    $core.int? duration,
+  }) {
+    final _result = create();
+    if (identifier != null) {
+      _result.identifier = identifier;
+    }
+    if (parentIdentifiers != null) {
+      _result.parentIdentifiers.addAll(parentIdentifiers);
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (context != null) {
+      _result.context = context;
+    }
+    if (inputParams != null) {
+      _result.inputParams.addAll(inputParams);
+    }
+    if (outputParam != null) {
+      _result.outputParam = outputParam;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (duration != null) {
+      _result.duration = duration;
+    }
+    return _result;
+  }
+  factory ActionBlockDebugData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ActionBlockDebugData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ActionBlockDebugData clone() => ActionBlockDebugData()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ActionBlockDebugData copyWith(void Function(ActionBlockDebugData) updates) => super.copyWith((message) => updates(message as ActionBlockDebugData)) as ActionBlockDebugData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ActionBlockDebugData create() => ActionBlockDebugData._();
+  ActionBlockDebugData createEmptyInstance() => create();
+  static $pb.PbList<ActionBlockDebugData> createRepeated() => $pb.PbList<ActionBlockDebugData>();
+  @$core.pragma('dart2js:noInline')
+  static ActionBlockDebugData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionBlockDebugData>(create);
+  static ActionBlockDebugData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get identifier => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set identifier($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIdentifier() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIdentifier() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get parentIdentifiers => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set name($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearName() => clearField(3);
+
+  @$pb.TagNumber(4)
+  ActionContext get context => $_getN(3);
+  @$pb.TagNumber(4)
+  set context(ActionContext v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasContext() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearContext() => clearField(4);
+  @$pb.TagNumber(4)
+  ActionContext ensureContext() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.Map<$core.String, DebugDataField> get inputParams => $_getMap(4);
+
+  @$pb.TagNumber(6)
+  DebugDataField get outputParam => $_getN(5);
+  @$pb.TagNumber(6)
+  set outputParam(DebugDataField v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasOutputParam() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearOutputParam() => clearField(6);
+  @$pb.TagNumber(6)
+  DebugDataField ensureOutputParam() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $core.int get timestamp => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set timestamp($core.int v) { $_setSignedInt32(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasTimestamp() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearTimestamp() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.int get duration => $_getIZ(7);
+  @$pb.TagNumber(8)
+  set duration($core.int v) { $_setSignedInt32(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasDuration() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearDuration() => clearField(8);
+}
+

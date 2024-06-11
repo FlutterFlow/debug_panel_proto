@@ -1,3 +1,7 @@
+## 0.0.6
+
+Add support for activity logging
+
 ## 0.0.5
 
 Small refactor
