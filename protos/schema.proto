@@ -112,6 +112,7 @@ message ActionDebugData {
   int32 duration = 11;
   string comment = 12;
   string error_message = 13;
+  string trigger = 14;
 }
 
 message ActionFlowDebugData {
@@ -124,4 +125,5 @@ message ActionFlowDebugData {
   int32 timestamp = 7;
   int32 duration = 8;
   ActionStatus status = 9;
+  string trigger = 10;
 }

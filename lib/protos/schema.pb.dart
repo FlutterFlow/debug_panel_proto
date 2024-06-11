@@ -710,6 +710,7 @@ class ActionDebugData extends $pb.GeneratedMessage {
     ..a<$core.int>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', $pb.PbFieldType.O3)
     ..aOS(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'comment')
     ..aOS(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorMessage')
+    ..aOS(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trigger')
     ..hasRequiredFields = false
   ;
 
@@ -728,6 +729,7 @@ class ActionDebugData extends $pb.GeneratedMessage {
     $core.int? duration,
     $core.String? comment,
     $core.String? errorMessage,
+    $core.String? trigger,
   }) {
     final _result = create();
     if (identifier != null) {
@@ -768,6 +770,9 @@ class ActionDebugData extends $pb.GeneratedMessage {
     }
     if (errorMessage != null) {
       _result.errorMessage = errorMessage;
+    }
+    if (trigger != null) {
+      _result.trigger = trigger;
     }
     return _result;
   }
@@ -900,6 +905,15 @@ class ActionDebugData extends $pb.GeneratedMessage {
   $core.bool hasErrorMessage() => $_has(12);
   @$pb.TagNumber(13)
   void clearErrorMessage() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.String get trigger => $_getSZ(13);
+  @$pb.TagNumber(14)
+  set trigger($core.String v) { $_setString(13, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasTrigger() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearTrigger() => clearField(14);
 }
 
 class ActionFlowDebugData extends $pb.GeneratedMessage {
@@ -913,6 +927,7 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
     ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
     ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', $pb.PbFieldType.O3)
     ..e<ActionStatus>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ActionStatus.ACTION_STATUS_UNSPECIFIED, valueOf: ActionStatus.valueOf, enumValues: ActionStatus.values)
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trigger')
     ..hasRequiredFields = false
   ;
 
@@ -927,6 +942,7 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
     $core.int? timestamp,
     $core.int? duration,
     ActionStatus? status,
+    $core.String? trigger,
   }) {
     final _result = create();
     if (identifier != null) {
@@ -955,6 +971,9 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
     }
     if (status != null) {
       _result.status = status;
+    }
+    if (trigger != null) {
+      _result.trigger = trigger;
     }
     return _result;
   }
@@ -1049,5 +1068,14 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
   $core.bool hasStatus() => $_has(8);
   @$pb.TagNumber(9)
   void clearStatus() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get trigger => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set trigger($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasTrigger() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearTrigger() => clearField(10);
 }
 
