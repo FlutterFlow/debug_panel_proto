@@ -1,3 +1,7 @@
+## 0.0.9
+
+Small renaming
+
 ## 0.0.8
 
 Small refactor

@@ -8,33 +8,33 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use actionStatusDescriptor instead')
-const ActionStatus$json = const {
-  '1': 'ActionStatus',
+@$core.Deprecated('Use debugActionStatusDescriptor instead')
+const DebugActionStatus$json = const {
+  '1': 'DebugActionStatus',
   '2': const [
-    const {'1': 'ACTION_STATUS_UNSPECIFIED', '2': 0},
-    const {'1': 'ACTION_STATUS_BEGIN', '2': 1},
-    const {'1': 'ACTION_STATUS_END', '2': 2},
-    const {'1': 'ACTION_STATUS_FAILED', '2': 3},
+    const {'1': 'DEBUG_ACTION_STATUS_UNSPECIFIED', '2': 0},
+    const {'1': 'DEBUG_ACTION_STATUS_BEGIN', '2': 1},
+    const {'1': 'DEBUG_ACTION_STATUS_END', '2': 2},
+    const {'1': 'DEBUG_ACTION_STATUS_FAILED', '2': 3},
   ],
 };
 
-/// Descriptor for `ActionStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List actionStatusDescriptor = $convert.base64Decode('CgxBY3Rpb25TdGF0dXMSHQoZQUNUSU9OX1NUQVRVU19VTlNQRUNJRklFRBAAEhcKE0FDVElPTl9TVEFUVVNfQkVHSU4QARIVChFBQ1RJT05fU1RBVFVTX0VORBACEhgKFEFDVElPTl9TVEFUVVNfRkFJTEVEEAM=');
-@$core.Deprecated('Use actionFlowTypeDescriptor instead')
-const ActionFlowType$json = const {
-  '1': 'ActionFlowType',
+/// Descriptor for `DebugActionStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List debugActionStatusDescriptor = $convert.base64Decode('ChFEZWJ1Z0FjdGlvblN0YXR1cxIjCh9ERUJVR19BQ1RJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASHQoZREVCVUdfQUNUSU9OX1NUQVRVU19CRUdJThABEhsKF0RFQlVHX0FDVElPTl9TVEFUVVNfRU5EEAISHgoaREVCVUdfQUNUSU9OX1NUQVRVU19GQUlMRUQQAw==');
+@$core.Deprecated('Use debugActionFlowTypeDescriptor instead')
+const DebugActionFlowType$json = const {
+  '1': 'DebugActionFlowType',
   '2': const [
-    const {'1': 'ACTION_FLOW_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'ACTION_FLOW_TYPE_CONDITION', '2': 1},
-    const {'1': 'ACTION_FLOW_TYPE_LOOP', '2': 2},
-    const {'1': 'ACTION_FLOW_TYPE_LOOP_BREAK', '2': 3},
-    const {'1': 'ACTION_FLOW_TYPE_PARALLEL', '2': 4},
+    const {'1': 'DEBUG_ACTION_FLOW_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'DEBUG_ACTION_FLOW_TYPE_CONDITION', '2': 1},
+    const {'1': 'DEBUG_ACTION_FLOW_TYPE_LOOP', '2': 2},
+    const {'1': 'DEBUG_ACTION_FLOW_TYPE_LOOP_BREAK', '2': 3},
+    const {'1': 'DEBUG_ACTION_FLOW_TYPE_PARALLEL', '2': 4},
   ],
 };
 
-/// Descriptor for `ActionFlowType`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List actionFlowTypeDescriptor = $convert.base64Decode('Cg5BY3Rpb25GbG93VHlwZRIgChxBQ1RJT05fRkxPV19UWVBFX1VOU1BFQ0lGSUVEEAASHgoaQUNUSU9OX0ZMT1dfVFlQRV9DT05ESVRJT04QARIZChVBQ1RJT05fRkxPV19UWVBFX0xPT1AQAhIfChtBQ1RJT05fRkxPV19UWVBFX0xPT1BfQlJFQUsQAxIdChlBQ1RJT05fRkxPV19UWVBFX1BBUkFMTEVMEAQ=');
+/// Descriptor for `DebugActionFlowType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List debugActionFlowTypeDescriptor = $convert.base64Decode('ChNEZWJ1Z0FjdGlvbkZsb3dUeXBlEiYKIkRFQlVHX0FDVElPTl9GTE9XX1RZUEVfVU5TUEVDSUZJRUQQABIkCiBERUJVR19BQ1RJT05fRkxPV19UWVBFX0NPTkRJVElPThABEh8KG0RFQlVHX0FDVElPTl9GTE9XX1RZUEVfTE9PUBACEiUKIURFQlVHX0FDVElPTl9GTE9XX1RZUEVfTE9PUF9CUkVBSxADEiMKH0RFQlVHX0FDVElPTl9GTE9XX1RZUEVfUEFSQUxMRUwQBA==');
 @$core.Deprecated('Use debugDataFieldDescriptor instead')
 const DebugDataField$json = const {
   '1': 'DebugDataField',
@@ -297,9 +297,9 @@ const DynamicWidgetClassDebugData_ComponentStatesEntry$json = const {
 
 /// Descriptor for `DynamicWidgetClassDebugData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List dynamicWidgetClassDebugDataDescriptor = $convert.base64Decode('ChtEeW5hbWljV2lkZ2V0Q2xhc3NEZWJ1Z0RhdGESYwoQY29tcG9uZW50X3N0YXRlcxgFIAMoCzI4LnNjaGVtYS5EeW5hbWljV2lkZ2V0Q2xhc3NEZWJ1Z0RhdGEuQ29tcG9uZW50U3RhdGVzRW50cnlSD2NvbXBvbmVudFN0YXRlcxpgChRDb21wb25lbnRTdGF0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIyCgV2YWx1ZRgCIAEoCzIcLnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YVIFdmFsdWU6AjgB');
-@$core.Deprecated('Use actionContextDescriptor instead')
-const ActionContext$json = const {
-  '1': 'ActionContext',
+@$core.Deprecated('Use debugActionContextDescriptor instead')
+const DebugActionContext$json = const {
+  '1': 'DebugActionContext',
   '2': const [
     const {'1': 'node_identifier', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'nodeIdentifier'},
     const {'1': 'component_identifier', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'componentIdentifier'},
@@ -310,8 +310,8 @@ const ActionContext$json = const {
   ],
 };
 
-/// Descriptor for `ActionContext`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List actionContextDescriptor = $convert.base64Decode('Cg1BY3Rpb25Db250ZXh0EikKD25vZGVfaWRlbnRpZmllchgBIAEoCUgAUg5ub2RlSWRlbnRpZmllchIzChRjb21wb25lbnRfaWRlbnRpZmllchgCIAEoCUgAUhNjb21wb25lbnRJZGVudGlmaWVyEj4KGmFjdGlvbl9jYWxsYmFja19pZGVudGlmaWVyGAMgASgJSABSGGFjdGlvbkNhbGxiYWNrSWRlbnRpZmllckIJCgdjb250ZXh0');
+/// Descriptor for `DebugActionContext`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List debugActionContextDescriptor = $convert.base64Decode('ChJEZWJ1Z0FjdGlvbkNvbnRleHQSKQoPbm9kZV9pZGVudGlmaWVyGAEgASgJSABSDm5vZGVJZGVudGlmaWVyEjMKFGNvbXBvbmVudF9pZGVudGlmaWVyGAIgASgJSABSE2NvbXBvbmVudElkZW50aWZpZXISPgoaYWN0aW9uX2NhbGxiYWNrX2lkZW50aWZpZXIYAyABKAlIAFIYYWN0aW9uQ2FsbGJhY2tJZGVudGlmaWVyQgkKB2NvbnRleHQ=');
 @$core.Deprecated('Use actionDebugDataDescriptor instead')
 const ActionDebugData$json = const {
   '1': 'ActionDebugData',
@@ -321,11 +321,11 @@ const ActionDebugData$json = const {
     const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'category', '3': 4, '4': 1, '5': 9, '10': 'category'},
     const {'1': 'summary', '3': 5, '4': 1, '5': 9, '10': 'summary'},
-    const {'1': 'context', '3': 6, '4': 1, '5': 11, '6': '.schema.ActionContext', '10': 'context'},
+    const {'1': 'context', '3': 6, '4': 1, '5': 11, '6': '.schema.DebugActionContext', '10': 'context'},
     const {'1': 'input_params', '3': 7, '4': 3, '5': 11, '6': '.schema.ActionDebugData.InputParamsEntry', '10': 'inputParams'},
     const {'1': 'output_param', '3': 8, '4': 1, '5': 11, '6': '.schema.DebugDataField', '10': 'outputParam'},
     const {'1': 'timestamp', '3': 9, '4': 1, '5': 5, '10': 'timestamp'},
-    const {'1': 'status', '3': 10, '4': 1, '5': 14, '6': '.schema.ActionStatus', '10': 'status'},
+    const {'1': 'status', '3': 10, '4': 1, '5': 14, '6': '.schema.DebugActionStatus', '10': 'status'},
     const {'1': 'duration', '3': 11, '4': 1, '5': 5, '10': 'duration'},
     const {'1': 'comment', '3': 12, '4': 1, '5': 9, '10': 'comment'},
     const {'1': 'error_message', '3': 13, '4': 1, '5': 9, '10': 'errorMessage'},
@@ -345,7 +345,7 @@ const ActionDebugData_InputParamsEntry$json = const {
 };
 
 /// Descriptor for `ActionDebugData`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List actionDebugDataDescriptor = $convert.base64Decode('Cg9BY3Rpb25EZWJ1Z0RhdGESHgoKaWRlbnRpZmllchgBIAEoCVIKaWRlbnRpZmllchItChJwYXJlbnRfaWRlbnRpZmllcnMYAiADKAlSEXBhcmVudElkZW50aWZpZXJzEhIKBG5hbWUYAyABKAlSBG5hbWUSGgoIY2F0ZWdvcnkYBCABKAlSCGNhdGVnb3J5EhgKB3N1bW1hcnkYBSABKAlSB3N1bW1hcnkSLwoHY29udGV4dBgGIAEoCzIVLnNjaGVtYS5BY3Rpb25Db250ZXh0Ugdjb250ZXh0EksKDGlucHV0X3BhcmFtcxgHIAMoCzIoLnNjaGVtYS5BY3Rpb25EZWJ1Z0RhdGEuSW5wdXRQYXJhbXNFbnRyeVILaW5wdXRQYXJhbXMSOQoMb3V0cHV0X3BhcmFtGAggASgLMhYuc2NoZW1hLkRlYnVnRGF0YUZpZWxkUgtvdXRwdXRQYXJhbRIcCgl0aW1lc3RhbXAYCSABKAVSCXRpbWVzdGFtcBIsCgZzdGF0dXMYCiABKA4yFC5zY2hlbWEuQWN0aW9uU3RhdHVzUgZzdGF0dXMSGgoIZHVyYXRpb24YCyABKAVSCGR1cmF0aW9uEhgKB2NvbW1lbnQYDCABKAlSB2NvbW1lbnQSIwoNZXJyb3JfbWVzc2FnZRgNIAEoCVIMZXJyb3JNZXNzYWdlEhgKB3RyaWdnZXIYDiABKAlSB3RyaWdnZXIaVgoQSW5wdXRQYXJhbXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLnNjaGVtYS5EZWJ1Z0RhdGFGaWVsZFIFdmFsdWU6AjgB');
+final $typed_data.Uint8List actionDebugDataDescriptor = $convert.base64Decode('Cg9BY3Rpb25EZWJ1Z0RhdGESHgoKaWRlbnRpZmllchgBIAEoCVIKaWRlbnRpZmllchItChJwYXJlbnRfaWRlbnRpZmllcnMYAiADKAlSEXBhcmVudElkZW50aWZpZXJzEhIKBG5hbWUYAyABKAlSBG5hbWUSGgoIY2F0ZWdvcnkYBCABKAlSCGNhdGVnb3J5EhgKB3N1bW1hcnkYBSABKAlSB3N1bW1hcnkSNAoHY29udGV4dBgGIAEoCzIaLnNjaGVtYS5EZWJ1Z0FjdGlvbkNvbnRleHRSB2NvbnRleHQSSwoMaW5wdXRfcGFyYW1zGAcgAygLMiguc2NoZW1hLkFjdGlvbkRlYnVnRGF0YS5JbnB1dFBhcmFtc0VudHJ5UgtpbnB1dFBhcmFtcxI5CgxvdXRwdXRfcGFyYW0YCCABKAsyFi5zY2hlbWEuRGVidWdEYXRhRmllbGRSC291dHB1dFBhcmFtEhwKCXRpbWVzdGFtcBgJIAEoBVIJdGltZXN0YW1wEjEKBnN0YXR1cxgKIAEoDjIZLnNjaGVtYS5EZWJ1Z0FjdGlvblN0YXR1c1IGc3RhdHVzEhoKCGR1cmF0aW9uGAsgASgFUghkdXJhdGlvbhIYCgdjb21tZW50GAwgASgJUgdjb21tZW50EiMKDWVycm9yX21lc3NhZ2UYDSABKAlSDGVycm9yTWVzc2FnZRIYCgd0cmlnZ2VyGA4gASgJUgd0cmlnZ2VyGlYKEElucHV0UGFyYW1zRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLAoFdmFsdWUYAiABKAsyFi5zY2hlbWEuRGVidWdEYXRhRmllbGRSBXZhbHVlOgI4AQ==');
 @$core.Deprecated('Use actionFlowDebugDataDescriptor instead')
 const ActionFlowDebugData$json = const {
   '1': 'ActionFlowDebugData',
@@ -353,12 +353,12 @@ const ActionFlowDebugData$json = const {
     const {'1': 'identifier', '3': 1, '4': 1, '5': 9, '10': 'identifier'},
     const {'1': 'parent_identifiers', '3': 2, '4': 3, '5': 9, '10': 'parentIdentifiers'},
     const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'type', '3': 4, '4': 1, '5': 14, '6': '.schema.ActionFlowType', '10': 'type'},
-    const {'1': 'context', '3': 5, '4': 1, '5': 11, '6': '.schema.ActionContext', '10': 'context'},
+    const {'1': 'type', '3': 4, '4': 1, '5': 14, '6': '.schema.DebugActionFlowType', '10': 'type'},
+    const {'1': 'context', '3': 5, '4': 1, '5': 11, '6': '.schema.DebugActionContext', '10': 'context'},
     const {'1': 'params', '3': 6, '4': 3, '5': 11, '6': '.schema.ActionFlowDebugData.ParamsEntry', '10': 'params'},
     const {'1': 'timestamp', '3': 7, '4': 1, '5': 5, '10': 'timestamp'},
     const {'1': 'duration', '3': 8, '4': 1, '5': 5, '10': 'duration'},
-    const {'1': 'status', '3': 9, '4': 1, '5': 14, '6': '.schema.ActionStatus', '10': 'status'},
+    const {'1': 'status', '3': 9, '4': 1, '5': 14, '6': '.schema.DebugActionStatus', '10': 'status'},
     const {'1': 'trigger', '3': 10, '4': 1, '5': 9, '10': 'trigger'},
   ],
   '3': const [ActionFlowDebugData_ParamsEntry$json],
@@ -375,4 +375,4 @@ const ActionFlowDebugData_ParamsEntry$json = const {
 };
 
 /// Descriptor for `ActionFlowDebugData`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List actionFlowDebugDataDescriptor = $convert.base64Decode('ChNBY3Rpb25GbG93RGVidWdEYXRhEh4KCmlkZW50aWZpZXIYASABKAlSCmlkZW50aWZpZXISLQoScGFyZW50X2lkZW50aWZpZXJzGAIgAygJUhFwYXJlbnRJZGVudGlmaWVycxISCgRuYW1lGAMgASgJUgRuYW1lEioKBHR5cGUYBCABKA4yFi5zY2hlbWEuQWN0aW9uRmxvd1R5cGVSBHR5cGUSLwoHY29udGV4dBgFIAEoCzIVLnNjaGVtYS5BY3Rpb25Db250ZXh0Ugdjb250ZXh0Ej8KBnBhcmFtcxgGIAMoCzInLnNjaGVtYS5BY3Rpb25GbG93RGVidWdEYXRhLlBhcmFtc0VudHJ5UgZwYXJhbXMSHAoJdGltZXN0YW1wGAcgASgFUgl0aW1lc3RhbXASGgoIZHVyYXRpb24YCCABKAVSCGR1cmF0aW9uEiwKBnN0YXR1cxgJIAEoDjIULnNjaGVtYS5BY3Rpb25TdGF0dXNSBnN0YXR1cxIYCgd0cmlnZ2VyGAogASgJUgd0cmlnZ2VyGlEKC1BhcmFtc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuc2NoZW1hLkRlYnVnRGF0YUZpZWxkUgV2YWx1ZToCOAE=');
+final $typed_data.Uint8List actionFlowDebugDataDescriptor = $convert.base64Decode('ChNBY3Rpb25GbG93RGVidWdEYXRhEh4KCmlkZW50aWZpZXIYASABKAlSCmlkZW50aWZpZXISLQoScGFyZW50X2lkZW50aWZpZXJzGAIgAygJUhFwYXJlbnRJZGVudGlmaWVycxISCgRuYW1lGAMgASgJUgRuYW1lEi8KBHR5cGUYBCABKA4yGy5zY2hlbWEuRGVidWdBY3Rpb25GbG93VHlwZVIEdHlwZRI0Cgdjb250ZXh0GAUgASgLMhouc2NoZW1hLkRlYnVnQWN0aW9uQ29udGV4dFIHY29udGV4dBI/CgZwYXJhbXMYBiADKAsyJy5zY2hlbWEuQWN0aW9uRmxvd0RlYnVnRGF0YS5QYXJhbXNFbnRyeVIGcGFyYW1zEhwKCXRpbWVzdGFtcBgHIAEoBVIJdGltZXN0YW1wEhoKCGR1cmF0aW9uGAggASgFUghkdXJhdGlvbhIxCgZzdGF0dXMYCSABKA4yGS5zY2hlbWEuRGVidWdBY3Rpb25TdGF0dXNSBnN0YXR1cxIYCgd0cmlnZ2VyGAogASgJUgd0cmlnZ2VyGlEKC1BhcmFtc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuc2NoZW1hLkRlYnVnRGF0YUZpZWxkUgV2YWx1ZToCOAE=');

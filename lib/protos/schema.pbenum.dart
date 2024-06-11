@@ -9,44 +9,44 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ActionStatus extends $pb.ProtobufEnum {
-  static const ActionStatus ACTION_STATUS_UNSPECIFIED = ActionStatus._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_STATUS_UNSPECIFIED');
-  static const ActionStatus ACTION_STATUS_BEGIN = ActionStatus._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_STATUS_BEGIN');
-  static const ActionStatus ACTION_STATUS_END = ActionStatus._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_STATUS_END');
-  static const ActionStatus ACTION_STATUS_FAILED = ActionStatus._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_STATUS_FAILED');
+class DebugActionStatus extends $pb.ProtobufEnum {
+  static const DebugActionStatus DEBUG_ACTION_STATUS_UNSPECIFIED = DebugActionStatus._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_STATUS_UNSPECIFIED');
+  static const DebugActionStatus DEBUG_ACTION_STATUS_BEGIN = DebugActionStatus._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_STATUS_BEGIN');
+  static const DebugActionStatus DEBUG_ACTION_STATUS_END = DebugActionStatus._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_STATUS_END');
+  static const DebugActionStatus DEBUG_ACTION_STATUS_FAILED = DebugActionStatus._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_STATUS_FAILED');
 
-  static const $core.List<ActionStatus> values = <ActionStatus> [
-    ACTION_STATUS_UNSPECIFIED,
-    ACTION_STATUS_BEGIN,
-    ACTION_STATUS_END,
-    ACTION_STATUS_FAILED,
+  static const $core.List<DebugActionStatus> values = <DebugActionStatus> [
+    DEBUG_ACTION_STATUS_UNSPECIFIED,
+    DEBUG_ACTION_STATUS_BEGIN,
+    DEBUG_ACTION_STATUS_END,
+    DEBUG_ACTION_STATUS_FAILED,
   ];
 
-  static final $core.Map<$core.int, ActionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ActionStatus? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, DebugActionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DebugActionStatus? valueOf($core.int value) => _byValue[value];
 
-  const ActionStatus._($core.int v, $core.String n) : super(v, n);
+  const DebugActionStatus._($core.int v, $core.String n) : super(v, n);
 }
 
-class ActionFlowType extends $pb.ProtobufEnum {
-  static const ActionFlowType ACTION_FLOW_TYPE_UNSPECIFIED = ActionFlowType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_FLOW_TYPE_UNSPECIFIED');
-  static const ActionFlowType ACTION_FLOW_TYPE_CONDITION = ActionFlowType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_FLOW_TYPE_CONDITION');
-  static const ActionFlowType ACTION_FLOW_TYPE_LOOP = ActionFlowType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_FLOW_TYPE_LOOP');
-  static const ActionFlowType ACTION_FLOW_TYPE_LOOP_BREAK = ActionFlowType._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_FLOW_TYPE_LOOP_BREAK');
-  static const ActionFlowType ACTION_FLOW_TYPE_PARALLEL = ActionFlowType._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION_FLOW_TYPE_PARALLEL');
+class DebugActionFlowType extends $pb.ProtobufEnum {
+  static const DebugActionFlowType DEBUG_ACTION_FLOW_TYPE_UNSPECIFIED = DebugActionFlowType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_FLOW_TYPE_UNSPECIFIED');
+  static const DebugActionFlowType DEBUG_ACTION_FLOW_TYPE_CONDITION = DebugActionFlowType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_FLOW_TYPE_CONDITION');
+  static const DebugActionFlowType DEBUG_ACTION_FLOW_TYPE_LOOP = DebugActionFlowType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_FLOW_TYPE_LOOP');
+  static const DebugActionFlowType DEBUG_ACTION_FLOW_TYPE_LOOP_BREAK = DebugActionFlowType._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_FLOW_TYPE_LOOP_BREAK');
+  static const DebugActionFlowType DEBUG_ACTION_FLOW_TYPE_PARALLEL = DebugActionFlowType._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEBUG_ACTION_FLOW_TYPE_PARALLEL');
 
-  static const $core.List<ActionFlowType> values = <ActionFlowType> [
-    ACTION_FLOW_TYPE_UNSPECIFIED,
-    ACTION_FLOW_TYPE_CONDITION,
-    ACTION_FLOW_TYPE_LOOP,
-    ACTION_FLOW_TYPE_LOOP_BREAK,
-    ACTION_FLOW_TYPE_PARALLEL,
+  static const $core.List<DebugActionFlowType> values = <DebugActionFlowType> [
+    DEBUG_ACTION_FLOW_TYPE_UNSPECIFIED,
+    DEBUG_ACTION_FLOW_TYPE_CONDITION,
+    DEBUG_ACTION_FLOW_TYPE_LOOP,
+    DEBUG_ACTION_FLOW_TYPE_LOOP_BREAK,
+    DEBUG_ACTION_FLOW_TYPE_PARALLEL,
   ];
 
-  static final $core.Map<$core.int, ActionFlowType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ActionFlowType? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, DebugActionFlowType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DebugActionFlowType? valueOf($core.int value) => _byValue[value];
 
-  const ActionFlowType._($core.int v, $core.String n) : super(v, n);
+  const DebugActionFlowType._($core.int v, $core.String n) : super(v, n);
 }
 
 class DebugDataField_ParamType extends $pb.ProtobufEnum {

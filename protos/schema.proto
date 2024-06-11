@@ -75,7 +75,7 @@ message DynamicWidgetClassDebugData {
   map<string, WidgetClassDebugData> component_states = 5;
 }
 
-message ActionContext {
+message DebugActionContext {
   oneof context {
     string node_identifier = 1;
     string component_identifier = 2;
@@ -83,19 +83,19 @@ message ActionContext {
   }
 }
 
-enum ActionStatus {
-  ACTION_STATUS_UNSPECIFIED = 0;
-  ACTION_STATUS_BEGIN = 1;
-  ACTION_STATUS_END = 2;
-  ACTION_STATUS_FAILED = 3;
+enum DebugActionStatus {
+  DEBUG_ACTION_STATUS_UNSPECIFIED = 0;
+  DEBUG_ACTION_STATUS_BEGIN = 1;
+  DEBUG_ACTION_STATUS_END = 2;
+  DEBUG_ACTION_STATUS_FAILED = 3;
 }
 
-enum ActionFlowType {
-  ACTION_FLOW_TYPE_UNSPECIFIED = 0;
-  ACTION_FLOW_TYPE_CONDITION = 1;
-  ACTION_FLOW_TYPE_LOOP = 2;
-  ACTION_FLOW_TYPE_LOOP_BREAK = 3;
-  ACTION_FLOW_TYPE_PARALLEL = 4;
+enum DebugActionFlowType {
+  DEBUG_ACTION_FLOW_TYPE_UNSPECIFIED = 0;
+  DEBUG_ACTION_FLOW_TYPE_CONDITION = 1;
+  DEBUG_ACTION_FLOW_TYPE_LOOP = 2;
+  DEBUG_ACTION_FLOW_TYPE_LOOP_BREAK = 3;
+  DEBUG_ACTION_FLOW_TYPE_PARALLEL = 4;
 }
 
 message ActionDebugData {
@@ -104,11 +104,11 @@ message ActionDebugData {
   string name = 3;
   string category = 4;
   string summary = 5;
-  ActionContext context = 6;
+  DebugActionContext context = 6;
   map<string, DebugDataField> input_params = 7;
   DebugDataField output_param = 8;
   int32 timestamp = 9;
-  ActionStatus status = 10;
+  DebugActionStatus status = 10;
   int32 duration = 11;
   string comment = 12;
   string error_message = 13;
@@ -119,11 +119,11 @@ message ActionFlowDebugData {
   string identifier = 1;
   repeated string parent_identifiers = 2;
   string name = 3;
-  ActionFlowType type = 4;
-  ActionContext context = 5;
+  DebugActionFlowType type = 4;
+  DebugActionContext context = 5;
   map<string, DebugDataField> params = 6;
   int32 timestamp = 7;
   int32 duration = 8;
-  ActionStatus status = 9;
+  DebugActionStatus status = 9;
   string trigger = 10;
 }

@@ -603,21 +603,21 @@ class DynamicWidgetClassDebugData extends $pb.GeneratedMessage {
   $core.Map<$core.String, WidgetClassDebugData> get componentStates => $_getMap(0);
 }
 
-enum ActionContext_Context {
+enum DebugActionContext_Context {
   nodeIdentifier, 
   componentIdentifier, 
   actionCallbackIdentifier, 
   notSet
 }
 
-class ActionContext extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, ActionContext_Context> _ActionContext_ContextByTag = {
-    1 : ActionContext_Context.nodeIdentifier,
-    2 : ActionContext_Context.componentIdentifier,
-    3 : ActionContext_Context.actionCallbackIdentifier,
-    0 : ActionContext_Context.notSet
+class DebugActionContext extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, DebugActionContext_Context> _DebugActionContext_ContextByTag = {
+    1 : DebugActionContext_Context.nodeIdentifier,
+    2 : DebugActionContext_Context.componentIdentifier,
+    3 : DebugActionContext_Context.actionCallbackIdentifier,
+    0 : DebugActionContext_Context.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ActionContext', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DebugActionContext', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nodeIdentifier')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'componentIdentifier')
@@ -625,8 +625,8 @@ class ActionContext extends $pb.GeneratedMessage {
     ..hasRequiredFields = false
   ;
 
-  ActionContext._() : super();
-  factory ActionContext({
+  DebugActionContext._() : super();
+  factory DebugActionContext({
     $core.String? nodeIdentifier,
     $core.String? componentIdentifier,
     $core.String? actionCallbackIdentifier,
@@ -643,28 +643,28 @@ class ActionContext extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory ActionContext.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ActionContext.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory DebugActionContext.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DebugActionContext.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ActionContext clone() => ActionContext()..mergeFromMessage(this);
+  DebugActionContext clone() => DebugActionContext()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ActionContext copyWith(void Function(ActionContext) updates) => super.copyWith((message) => updates(message as ActionContext)) as ActionContext; // ignore: deprecated_member_use
+  DebugActionContext copyWith(void Function(DebugActionContext) updates) => super.copyWith((message) => updates(message as DebugActionContext)) as DebugActionContext; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static ActionContext create() => ActionContext._();
-  ActionContext createEmptyInstance() => create();
-  static $pb.PbList<ActionContext> createRepeated() => $pb.PbList<ActionContext>();
+  static DebugActionContext create() => DebugActionContext._();
+  DebugActionContext createEmptyInstance() => create();
+  static $pb.PbList<DebugActionContext> createRepeated() => $pb.PbList<DebugActionContext>();
   @$core.pragma('dart2js:noInline')
-  static ActionContext getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionContext>(create);
-  static ActionContext? _defaultInstance;
+  static DebugActionContext getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DebugActionContext>(create);
+  static DebugActionContext? _defaultInstance;
 
-  ActionContext_Context whichContext() => _ActionContext_ContextByTag[$_whichOneof(0)]!;
+  DebugActionContext_Context whichContext() => _DebugActionContext_ContextByTag[$_whichOneof(0)]!;
   void clearContext() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -702,11 +702,11 @@ class ActionDebugData extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'category')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'summary')
-    ..aOM<ActionContext>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: ActionContext.create)
+    ..aOM<DebugActionContext>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: DebugActionContext.create)
     ..m<$core.String, DebugDataField>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputParams', entryClassName: 'ActionDebugData.InputParamsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
     ..aOM<DebugDataField>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputParam', subBuilder: DebugDataField.create)
     ..a<$core.int>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
-    ..e<ActionStatus>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ActionStatus.ACTION_STATUS_UNSPECIFIED, valueOf: ActionStatus.valueOf, enumValues: ActionStatus.values)
+    ..e<DebugActionStatus>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: DebugActionStatus.DEBUG_ACTION_STATUS_UNSPECIFIED, valueOf: DebugActionStatus.valueOf, enumValues: DebugActionStatus.values)
     ..a<$core.int>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', $pb.PbFieldType.O3)
     ..aOS(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'comment')
     ..aOS(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorMessage')
@@ -721,11 +721,11 @@ class ActionDebugData extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? category,
     $core.String? summary,
-    ActionContext? context,
+    DebugActionContext? context,
     $core.Map<$core.String, DebugDataField>? inputParams,
     DebugDataField? outputParam,
     $core.int? timestamp,
-    ActionStatus? status,
+    DebugActionStatus? status,
     $core.int? duration,
     $core.String? comment,
     $core.String? errorMessage,
@@ -837,15 +837,15 @@ class ActionDebugData extends $pb.GeneratedMessage {
   void clearSummary() => clearField(5);
 
   @$pb.TagNumber(6)
-  ActionContext get context => $_getN(5);
+  DebugActionContext get context => $_getN(5);
   @$pb.TagNumber(6)
-  set context(ActionContext v) { setField(6, v); }
+  set context(DebugActionContext v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasContext() => $_has(5);
   @$pb.TagNumber(6)
   void clearContext() => clearField(6);
   @$pb.TagNumber(6)
-  ActionContext ensureContext() => $_ensure(5);
+  DebugActionContext ensureContext() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.Map<$core.String, DebugDataField> get inputParams => $_getMap(6);
@@ -871,9 +871,9 @@ class ActionDebugData extends $pb.GeneratedMessage {
   void clearTimestamp() => clearField(9);
 
   @$pb.TagNumber(10)
-  ActionStatus get status => $_getN(9);
+  DebugActionStatus get status => $_getN(9);
   @$pb.TagNumber(10)
-  set status(ActionStatus v) { setField(10, v); }
+  set status(DebugActionStatus v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasStatus() => $_has(9);
   @$pb.TagNumber(10)
@@ -921,12 +921,12 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier')
     ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentIdentifiers')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..e<ActionFlowType>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ActionFlowType.ACTION_FLOW_TYPE_UNSPECIFIED, valueOf: ActionFlowType.valueOf, enumValues: ActionFlowType.values)
-    ..aOM<ActionContext>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: ActionContext.create)
+    ..e<DebugActionFlowType>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: DebugActionFlowType.DEBUG_ACTION_FLOW_TYPE_UNSPECIFIED, valueOf: DebugActionFlowType.valueOf, enumValues: DebugActionFlowType.values)
+    ..aOM<DebugActionContext>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: DebugActionContext.create)
     ..m<$core.String, DebugDataField>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'params', entryClassName: 'ActionFlowDebugData.ParamsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
     ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
     ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', $pb.PbFieldType.O3)
-    ..e<ActionStatus>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ActionStatus.ACTION_STATUS_UNSPECIFIED, valueOf: ActionStatus.valueOf, enumValues: ActionStatus.values)
+    ..e<DebugActionStatus>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: DebugActionStatus.DEBUG_ACTION_STATUS_UNSPECIFIED, valueOf: DebugActionStatus.valueOf, enumValues: DebugActionStatus.values)
     ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trigger')
     ..hasRequiredFields = false
   ;
@@ -936,12 +936,12 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
     $core.String? identifier,
     $core.Iterable<$core.String>? parentIdentifiers,
     $core.String? name,
-    ActionFlowType? type,
-    ActionContext? context,
+    DebugActionFlowType? type,
+    DebugActionContext? context,
     $core.Map<$core.String, DebugDataField>? params,
     $core.int? timestamp,
     $core.int? duration,
-    ActionStatus? status,
+    DebugActionStatus? status,
     $core.String? trigger,
   }) {
     final _result = create();
@@ -1020,24 +1020,24 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
   void clearName() => clearField(3);
 
   @$pb.TagNumber(4)
-  ActionFlowType get type => $_getN(3);
+  DebugActionFlowType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type(ActionFlowType v) { setField(4, v); }
+  set type(DebugActionFlowType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
   void clearType() => clearField(4);
 
   @$pb.TagNumber(5)
-  ActionContext get context => $_getN(4);
+  DebugActionContext get context => $_getN(4);
   @$pb.TagNumber(5)
-  set context(ActionContext v) { setField(5, v); }
+  set context(DebugActionContext v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasContext() => $_has(4);
   @$pb.TagNumber(5)
   void clearContext() => clearField(5);
   @$pb.TagNumber(5)
-  ActionContext ensureContext() => $_ensure(4);
+  DebugActionContext ensureContext() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.Map<$core.String, DebugDataField> get params => $_getMap(5);
@@ -1061,9 +1061,9 @@ class ActionFlowDebugData extends $pb.GeneratedMessage {
   void clearDuration() => clearField(8);
 
   @$pb.TagNumber(9)
-  ActionStatus get status => $_getN(8);
+  DebugActionStatus get status => $_getN(8);
   @$pb.TagNumber(9)
-  set status(ActionStatus v) { setField(9, v); }
+  set status(DebugActionStatus v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasStatus() => $_has(8);
   @$pb.TagNumber(9)
