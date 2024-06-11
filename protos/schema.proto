@@ -100,36 +100,28 @@ enum ActionFlowType {
 
 message ActionDebugData {
   string identifier = 1;
-  string name = 2;
-  string category = 3;
-  string summary = 4;
-  ActionContext context = 5;
-  map<string, DebugDataField> input_params = 6;
-  DebugDataField output_param = 7;
-  int32 timestamp = 8;
-  ActionStatus status = 9;
-  int32 duration = 10;
-  string comment = 11;
-  string error_message = 12;
+  repeated string parent_identifiers = 2;
+  string name = 3;
+  string category = 4;
+  string summary = 5;
+  ActionContext context = 6;
+  map<string, DebugDataField> input_params = 7;
+  DebugDataField output_param = 8;
+  int32 timestamp = 9;
+  ActionStatus status = 10;
+  int32 duration = 11;
+  string comment = 12;
+  string error_message = 13;
 }
 
 message ActionFlowDebugData {
   string identifier = 1;
-  string name = 2;
-  ActionFlowType type = 3;
-  ActionContext context = 4;
-  map<string, DebugDataField> input_params = 5;
-  int32 timestamp = 6;
-  int32 duration = 7;
-}
-
-message ActionBlockDebugData {
-  string identifier = 1;
   repeated string parent_identifiers = 2;
   string name = 3;
-  ActionContext context = 4;
-  map<string, DebugDataField> input_params = 5;
-  DebugDataField output_param = 6;
+  ActionFlowType type = 4;
+  ActionContext context = 5;
+  map<string, DebugDataField> params = 6;
   int32 timestamp = 7;
   int32 duration = 8;
+  ActionStatus status = 9;
 }
