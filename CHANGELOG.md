@@ -1,3 +1,7 @@
+## 0.1.0
+
+Add action parameter type
+
 ## 0.0.9
 
 Small renaming

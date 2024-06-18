@@ -21,6 +21,7 @@ message DebugDataField {
     SUPABASE_ROW = 15;
     POSTGRES_ROW = 16;
     SQLITE_ROW = 17;
+    ACTION = 18;
   }
   ParamType type = 1;
   oneof data {
