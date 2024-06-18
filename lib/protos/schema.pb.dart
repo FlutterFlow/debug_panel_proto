@@ -459,10 +459,12 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     ..m<$core.String, DebugDataField>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetStates', entryClassName: 'WidgetClassDebugData.WidgetStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
     ..m<$core.String, DebugDataField>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetParameters', entryClassName: 'WidgetClassDebugData.WidgetParametersEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
     ..m<$core.String, DebugDataField>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'actionOutputs', entryClassName: 'WidgetClassDebugData.ActionOutputsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
-    ..m<$core.String, WidgetClassDebugData>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'componentStates', entryClassName: 'WidgetClassDebugData.ComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: WidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
-    ..m<$core.String, DynamicWidgetClassDebugData>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dynamicComponentStates', entryClassName: 'WidgetClassDebugData.DynamicComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DynamicWidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
-    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetClassName')
+    ..m<$core.String, DebugDataField>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'generatorVariables', entryClassName: 'WidgetClassDebugData.GeneratorVariablesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
+    ..m<$core.String, DebugDataField>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backendQueries', entryClassName: 'WidgetClassDebugData.BackendQueriesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
+    ..m<$core.String, WidgetClassDebugData>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'componentStates', entryClassName: 'WidgetClassDebugData.ComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: WidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
+    ..m<$core.String, DynamicWidgetClassDebugData>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dynamicComponentStates', entryClassName: 'WidgetClassDebugData.DynamicComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DynamicWidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetClassName')
     ..hasRequiredFields = false
   ;
 
@@ -472,6 +474,8 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     $core.Map<$core.String, DebugDataField>? widgetStates,
     $core.Map<$core.String, DebugDataField>? widgetParameters,
     $core.Map<$core.String, DebugDataField>? actionOutputs,
+    $core.Map<$core.String, DebugDataField>? generatorVariables,
+    $core.Map<$core.String, DebugDataField>? backendQueries,
     $core.Map<$core.String, WidgetClassDebugData>? componentStates,
     $core.Map<$core.String, DynamicWidgetClassDebugData>? dynamicComponentStates,
     $core.String? link,
@@ -489,6 +493,12 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     }
     if (actionOutputs != null) {
       _result.actionOutputs.addAll(actionOutputs);
+    }
+    if (generatorVariables != null) {
+      _result.generatorVariables.addAll(generatorVariables);
+    }
+    if (backendQueries != null) {
+      _result.backendQueries.addAll(backendQueries);
     }
     if (componentStates != null) {
       _result.componentStates.addAll(componentStates);
@@ -538,28 +548,34 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
   $core.Map<$core.String, DebugDataField> get actionOutputs => $_getMap(3);
 
   @$pb.TagNumber(5)
-  $core.Map<$core.String, WidgetClassDebugData> get componentStates => $_getMap(4);
+  $core.Map<$core.String, DebugDataField> get generatorVariables => $_getMap(4);
 
   @$pb.TagNumber(6)
-  $core.Map<$core.String, DynamicWidgetClassDebugData> get dynamicComponentStates => $_getMap(5);
+  $core.Map<$core.String, DebugDataField> get backendQueries => $_getMap(5);
 
   @$pb.TagNumber(7)
-  $core.String get link => $_getSZ(6);
-  @$pb.TagNumber(7)
-  set link($core.String v) { $_setString(6, v); }
-  @$pb.TagNumber(7)
-  $core.bool hasLink() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearLink() => clearField(7);
+  $core.Map<$core.String, WidgetClassDebugData> get componentStates => $_getMap(6);
 
   @$pb.TagNumber(8)
-  $core.String get widgetClassName => $_getSZ(7);
-  @$pb.TagNumber(8)
-  set widgetClassName($core.String v) { $_setString(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasWidgetClassName() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearWidgetClassName() => clearField(8);
+  $core.Map<$core.String, DynamicWidgetClassDebugData> get dynamicComponentStates => $_getMap(7);
+
+  @$pb.TagNumber(9)
+  $core.String get link => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set link($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasLink() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearLink() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get widgetClassName => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set widgetClassName($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasWidgetClassName() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearWidgetClassName() => clearField(10);
 }
 
 class DynamicWidgetClassDebugData extends $pb.GeneratedMessage {

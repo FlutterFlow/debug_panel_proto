@@ -66,10 +66,12 @@ message WidgetClassDebugData {
   map<string, DebugDataField> widget_states = 2;
   map<string, DebugDataField> widget_parameters = 3;
   map<string, DebugDataField> action_outputs = 4;
-  map<string, WidgetClassDebugData> component_states = 5;
-  map<string, DynamicWidgetClassDebugData> dynamic_component_states = 6;
-  string link = 7;
-  string widget_class_name = 8;
+  map<string, DebugDataField> generator_variables = 5;
+  map<string, DebugDataField> backend_queries = 6;
+  map<string, WidgetClassDebugData> component_states = 7;
+  map<string, DynamicWidgetClassDebugData> dynamic_component_states = 8;
+  string link = 9;
+  string widget_class_name = 10;
 }
 
 message DynamicWidgetClassDebugData {

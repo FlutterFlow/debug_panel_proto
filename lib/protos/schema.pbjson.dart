@@ -207,12 +207,14 @@ const WidgetClassDebugData$json = const {
     const {'1': 'widget_states', '3': 2, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.WidgetStatesEntry', '10': 'widgetStates'},
     const {'1': 'widget_parameters', '3': 3, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.WidgetParametersEntry', '10': 'widgetParameters'},
     const {'1': 'action_outputs', '3': 4, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.ActionOutputsEntry', '10': 'actionOutputs'},
-    const {'1': 'component_states', '3': 5, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.ComponentStatesEntry', '10': 'componentStates'},
-    const {'1': 'dynamic_component_states', '3': 6, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.DynamicComponentStatesEntry', '10': 'dynamicComponentStates'},
-    const {'1': 'link', '3': 7, '4': 1, '5': 9, '10': 'link'},
-    const {'1': 'widget_class_name', '3': 8, '4': 1, '5': 9, '10': 'widgetClassName'},
+    const {'1': 'generator_variables', '3': 5, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.GeneratorVariablesEntry', '10': 'generatorVariables'},
+    const {'1': 'backend_queries', '3': 6, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.BackendQueriesEntry', '10': 'backendQueries'},
+    const {'1': 'component_states', '3': 7, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.ComponentStatesEntry', '10': 'componentStates'},
+    const {'1': 'dynamic_component_states', '3': 8, '4': 3, '5': 11, '6': '.schema.WidgetClassDebugData.DynamicComponentStatesEntry', '10': 'dynamicComponentStates'},
+    const {'1': 'link', '3': 9, '4': 1, '5': 9, '10': 'link'},
+    const {'1': 'widget_class_name', '3': 10, '4': 1, '5': 9, '10': 'widgetClassName'},
   ],
-  '3': const [WidgetClassDebugData_LocalStatesEntry$json, WidgetClassDebugData_WidgetStatesEntry$json, WidgetClassDebugData_WidgetParametersEntry$json, WidgetClassDebugData_ActionOutputsEntry$json, WidgetClassDebugData_ComponentStatesEntry$json, WidgetClassDebugData_DynamicComponentStatesEntry$json],
+  '3': const [WidgetClassDebugData_LocalStatesEntry$json, WidgetClassDebugData_WidgetStatesEntry$json, WidgetClassDebugData_WidgetParametersEntry$json, WidgetClassDebugData_ActionOutputsEntry$json, WidgetClassDebugData_GeneratorVariablesEntry$json, WidgetClassDebugData_BackendQueriesEntry$json, WidgetClassDebugData_ComponentStatesEntry$json, WidgetClassDebugData_DynamicComponentStatesEntry$json],
 };
 
 @$core.Deprecated('Use widgetClassDebugDataDescriptor instead')
@@ -256,6 +258,26 @@ const WidgetClassDebugData_ActionOutputsEntry$json = const {
 };
 
 @$core.Deprecated('Use widgetClassDebugDataDescriptor instead')
+const WidgetClassDebugData_GeneratorVariablesEntry$json = const {
+  '1': 'GeneratorVariablesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.schema.DebugDataField', '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use widgetClassDebugDataDescriptor instead')
+const WidgetClassDebugData_BackendQueriesEntry$json = const {
+  '1': 'BackendQueriesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.schema.DebugDataField', '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use widgetClassDebugDataDescriptor instead')
 const WidgetClassDebugData_ComponentStatesEntry$json = const {
   '1': 'ComponentStatesEntry',
   '2': const [
@@ -276,7 +298,7 @@ const WidgetClassDebugData_DynamicComponentStatesEntry$json = const {
 };
 
 /// Descriptor for `WidgetClassDebugData`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List widgetClassDebugDataDescriptor = $convert.base64Decode('ChRXaWRnZXRDbGFzc0RlYnVnRGF0YRJQCgxsb2NhbF9zdGF0ZXMYASADKAsyLS5zY2hlbWEuV2lkZ2V0Q2xhc3NEZWJ1Z0RhdGEuTG9jYWxTdGF0ZXNFbnRyeVILbG9jYWxTdGF0ZXMSUwoNd2lkZ2V0X3N0YXRlcxgCIAMoCzIuLnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5XaWRnZXRTdGF0ZXNFbnRyeVIMd2lkZ2V0U3RhdGVzEl8KEXdpZGdldF9wYXJhbWV0ZXJzGAMgAygLMjIuc2NoZW1hLldpZGdldENsYXNzRGVidWdEYXRhLldpZGdldFBhcmFtZXRlcnNFbnRyeVIQd2lkZ2V0UGFyYW1ldGVycxJWCg5hY3Rpb25fb3V0cHV0cxgEIAMoCzIvLnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5BY3Rpb25PdXRwdXRzRW50cnlSDWFjdGlvbk91dHB1dHMSXAoQY29tcG9uZW50X3N0YXRlcxgFIAMoCzIxLnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5Db21wb25lbnRTdGF0ZXNFbnRyeVIPY29tcG9uZW50U3RhdGVzEnIKGGR5bmFtaWNfY29tcG9uZW50X3N0YXRlcxgGIAMoCzI4LnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5EeW5hbWljQ29tcG9uZW50U3RhdGVzRW50cnlSFmR5bmFtaWNDb21wb25lbnRTdGF0ZXMSEgoEbGluaxgHIAEoCVIEbGluaxIqChF3aWRnZXRfY2xhc3NfbmFtZRgIIAEoCVIPd2lkZ2V0Q2xhc3NOYW1lGlYKEExvY2FsU3RhdGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLAoFdmFsdWUYAiABKAsyFi5zY2hlbWEuRGVidWdEYXRhRmllbGRSBXZhbHVlOgI4ARpXChFXaWRnZXRTdGF0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLnNjaGVtYS5EZWJ1Z0RhdGFGaWVsZFIFdmFsdWU6AjgBGlsKFVdpZGdldFBhcmFtZXRlcnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLnNjaGVtYS5EZWJ1Z0RhdGFGaWVsZFIFdmFsdWU6AjgBGlgKEkFjdGlvbk91dHB1dHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLnNjaGVtYS5EZWJ1Z0RhdGFGaWVsZFIFdmFsdWU6AjgBGmAKFENvbXBvbmVudFN0YXRlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EjIKBXZhbHVlGAIgASgLMhwuc2NoZW1hLldpZGdldENsYXNzRGVidWdEYXRhUgV2YWx1ZToCOAEabgobRHluYW1pY0NvbXBvbmVudFN0YXRlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EjkKBXZhbHVlGAIgASgLMiMuc2NoZW1hLkR5bmFtaWNXaWRnZXRDbGFzc0RlYnVnRGF0YVIFdmFsdWU6AjgB');
+final $typed_data.Uint8List widgetClassDebugDataDescriptor = $convert.base64Decode('ChRXaWRnZXRDbGFzc0RlYnVnRGF0YRJQCgxsb2NhbF9zdGF0ZXMYASADKAsyLS5zY2hlbWEuV2lkZ2V0Q2xhc3NEZWJ1Z0RhdGEuTG9jYWxTdGF0ZXNFbnRyeVILbG9jYWxTdGF0ZXMSUwoNd2lkZ2V0X3N0YXRlcxgCIAMoCzIuLnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5XaWRnZXRTdGF0ZXNFbnRyeVIMd2lkZ2V0U3RhdGVzEl8KEXdpZGdldF9wYXJhbWV0ZXJzGAMgAygLMjIuc2NoZW1hLldpZGdldENsYXNzRGVidWdEYXRhLldpZGdldFBhcmFtZXRlcnNFbnRyeVIQd2lkZ2V0UGFyYW1ldGVycxJWCg5hY3Rpb25fb3V0cHV0cxgEIAMoCzIvLnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5BY3Rpb25PdXRwdXRzRW50cnlSDWFjdGlvbk91dHB1dHMSZQoTZ2VuZXJhdG9yX3ZhcmlhYmxlcxgFIAMoCzI0LnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5HZW5lcmF0b3JWYXJpYWJsZXNFbnRyeVISZ2VuZXJhdG9yVmFyaWFibGVzElkKD2JhY2tlbmRfcXVlcmllcxgGIAMoCzIwLnNjaGVtYS5XaWRnZXRDbGFzc0RlYnVnRGF0YS5CYWNrZW5kUXVlcmllc0VudHJ5Ug5iYWNrZW5kUXVlcmllcxJcChBjb21wb25lbnRfc3RhdGVzGAcgAygLMjEuc2NoZW1hLldpZGdldENsYXNzRGVidWdEYXRhLkNvbXBvbmVudFN0YXRlc0VudHJ5Ug9jb21wb25lbnRTdGF0ZXMScgoYZHluYW1pY19jb21wb25lbnRfc3RhdGVzGAggAygLMjguc2NoZW1hLldpZGdldENsYXNzRGVidWdEYXRhLkR5bmFtaWNDb21wb25lbnRTdGF0ZXNFbnRyeVIWZHluYW1pY0NvbXBvbmVudFN0YXRlcxISCgRsaW5rGAkgASgJUgRsaW5rEioKEXdpZGdldF9jbGFzc19uYW1lGAogASgJUg93aWRnZXRDbGFzc05hbWUaVgoQTG9jYWxTdGF0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLnNjaGVtYS5EZWJ1Z0RhdGFGaWVsZFIFdmFsdWU6AjgBGlcKEVdpZGdldFN0YXRlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuc2NoZW1hLkRlYnVnRGF0YUZpZWxkUgV2YWx1ZToCOAEaWwoVV2lkZ2V0UGFyYW1ldGVyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuc2NoZW1hLkRlYnVnRGF0YUZpZWxkUgV2YWx1ZToCOAEaWAoSQWN0aW9uT3V0cHV0c0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuc2NoZW1hLkRlYnVnRGF0YUZpZWxkUgV2YWx1ZToCOAEaXQoXR2VuZXJhdG9yVmFyaWFibGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLAoFdmFsdWUYAiABKAsyFi5zY2hlbWEuRGVidWdEYXRhRmllbGRSBXZhbHVlOgI4ARpZChNCYWNrZW5kUXVlcmllc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuc2NoZW1hLkRlYnVnRGF0YUZpZWxkUgV2YWx1ZToCOAEaYAoUQ29tcG9uZW50U3RhdGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSMgoFdmFsdWUYAiABKAsyHC5zY2hlbWEuV2lkZ2V0Q2xhc3NEZWJ1Z0RhdGFSBXZhbHVlOgI4ARpuChtEeW5hbWljQ29tcG9uZW50U3RhdGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSOQoFdmFsdWUYAiABKAsyIy5zY2hlbWEuRHluYW1pY1dpZGdldENsYXNzRGVidWdEYXRhUgV2YWx1ZToCOAE=');
 @$core.Deprecated('Use dynamicWidgetClassDebugDataDescriptor instead')
 const DynamicWidgetClassDebugData$json = const {
   '1': 'DynamicWidgetClassDebugData',
