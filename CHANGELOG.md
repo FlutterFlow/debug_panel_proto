@@ -1,3 +1,7 @@
+## 0.1.1
+
+Add search_reference for certain messages (for searching their usages within FF)
+
 ## 0.1.0
 
 Support backend query and generator variable in widget class data

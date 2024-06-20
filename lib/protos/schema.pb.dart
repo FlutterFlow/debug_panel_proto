@@ -33,10 +33,11 @@ class DebugDataField extends $pb.GeneratedMessage {
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serializedValue')
     ..aOM<ListDebugDataField>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'listValue', subBuilder: ListDebugDataField.create)
     ..aOM<MapDebugDataField>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapValue', subBuilder: MapDebugDataField.create)
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nullable')
-    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasField')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'searchReference')
+    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nullable')
+    ..aOB(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasField')
     ..hasRequiredFields = false
   ;
 
@@ -46,10 +47,11 @@ class DebugDataField extends $pb.GeneratedMessage {
     $core.String? serializedValue,
     ListDebugDataField? listValue,
     MapDebugDataField? mapValue,
-    $core.String? link,
     $core.String? name,
+    $core.String? link,
+    $core.String? searchReference,
     $core.bool? nullable,
-    $core.bool? hasField_8,
+    $core.bool? hasField_9,
   }) {
     final _result = create();
     if (type != null) {
@@ -64,17 +66,20 @@ class DebugDataField extends $pb.GeneratedMessage {
     if (mapValue != null) {
       _result.mapValue = mapValue;
     }
+    if (name != null) {
+      _result.name = name;
+    }
     if (link != null) {
       _result.link = link;
     }
-    if (name != null) {
-      _result.name = name;
+    if (searchReference != null) {
+      _result.searchReference = searchReference;
     }
     if (nullable != null) {
       _result.nullable = nullable;
     }
-    if (hasField_8 != null) {
-      _result.hasField_8 = hasField_8;
+    if (hasField_9 != null) {
+      _result.hasField_9 = hasField_9;
     }
     return _result;
   }
@@ -143,40 +148,49 @@ class DebugDataField extends $pb.GeneratedMessage {
   MapDebugDataField ensureMapValue() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $core.String get link => $_getSZ(4);
+  $core.String get name => $_getSZ(4);
   @$pb.TagNumber(5)
-  set link($core.String v) { $_setString(4, v); }
+  set name($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasLink() => $_has(4);
+  $core.bool hasName() => $_has(4);
   @$pb.TagNumber(5)
-  void clearLink() => clearField(5);
+  void clearName() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get name => $_getSZ(5);
+  $core.String get link => $_getSZ(5);
   @$pb.TagNumber(6)
-  set name($core.String v) { $_setString(5, v); }
+  set link($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasName() => $_has(5);
+  $core.bool hasLink() => $_has(5);
   @$pb.TagNumber(6)
-  void clearName() => clearField(6);
+  void clearLink() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.bool get nullable => $_getBF(6);
+  $core.String get searchReference => $_getSZ(6);
   @$pb.TagNumber(7)
-  set nullable($core.bool v) { $_setBool(6, v); }
+  set searchReference($core.String v) { $_setString(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasNullable() => $_has(6);
+  $core.bool hasSearchReference() => $_has(6);
   @$pb.TagNumber(7)
-  void clearNullable() => clearField(7);
+  void clearSearchReference() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.bool get hasField_8 => $_getBF(7);
+  $core.bool get nullable => $_getBF(7);
   @$pb.TagNumber(8)
-  set hasField_8($core.bool v) { $_setBool(7, v); }
+  set nullable($core.bool v) { $_setBool(7, v); }
   @$pb.TagNumber(8)
-  $core.bool hasHasField_8() => $_has(7);
+  $core.bool hasNullable() => $_has(7);
   @$pb.TagNumber(8)
-  void clearHasField_8() => clearField(8);
+  void clearNullable() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.bool get hasField_9 => $_getBF(8);
+  @$pb.TagNumber(9)
+  set hasField_9($core.bool v) { $_setBool(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasHasField_9() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearHasField_9() => clearField(9);
 }
 
 class ListDebugDataField extends $pb.GeneratedMessage {
@@ -306,6 +320,7 @@ class AppStateDebugData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AppStateDebugData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..m<$core.String, DebugDataField>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'values', entryClassName: 'AppStateDebugData.ValuesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'searchReference')
     ..hasRequiredFields = false
   ;
 
@@ -313,6 +328,7 @@ class AppStateDebugData extends $pb.GeneratedMessage {
   factory AppStateDebugData({
     $core.Map<$core.String, DebugDataField>? values,
     $core.String? link,
+    $core.String? searchReference,
   }) {
     final _result = create();
     if (values != null) {
@@ -320,6 +336,9 @@ class AppStateDebugData extends $pb.GeneratedMessage {
     }
     if (link != null) {
       _result.link = link;
+    }
+    if (searchReference != null) {
+      _result.searchReference = searchReference;
     }
     return _result;
   }
@@ -355,12 +374,22 @@ class AppStateDebugData extends $pb.GeneratedMessage {
   $core.bool hasLink() => $_has(1);
   @$pb.TagNumber(2)
   void clearLink() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get searchReference => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set searchReference($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSearchReference() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSearchReference() => clearField(3);
 }
 
 class AppConstantDebugData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AppConstantDebugData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..m<$core.String, DebugDataField>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'values', entryClassName: 'AppConstantDebugData.ValuesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'searchReference')
     ..hasRequiredFields = false
   ;
 
@@ -368,6 +397,7 @@ class AppConstantDebugData extends $pb.GeneratedMessage {
   factory AppConstantDebugData({
     $core.Map<$core.String, DebugDataField>? values,
     $core.String? link,
+    $core.String? searchReference,
   }) {
     final _result = create();
     if (values != null) {
@@ -375,6 +405,9 @@ class AppConstantDebugData extends $pb.GeneratedMessage {
     }
     if (link != null) {
       _result.link = link;
+    }
+    if (searchReference != null) {
+      _result.searchReference = searchReference;
     }
     return _result;
   }
@@ -410,6 +443,15 @@ class AppConstantDebugData extends $pb.GeneratedMessage {
   $core.bool hasLink() => $_has(1);
   @$pb.TagNumber(2)
   void clearLink() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get searchReference => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set searchReference($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSearchReference() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSearchReference() => clearField(3);
 }
 
 class AuthenticatedUserDebugData extends $pb.GeneratedMessage {
@@ -464,7 +506,8 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     ..m<$core.String, WidgetClassDebugData>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'componentStates', entryClassName: 'WidgetClassDebugData.ComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: WidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
     ..m<$core.String, DynamicWidgetClassDebugData>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dynamicComponentStates', entryClassName: 'WidgetClassDebugData.DynamicComponentStatesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DynamicWidgetClassDebugData.create, packageName: const $pb.PackageName('schema'))
     ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
-    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetClassName')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'searchReference')
+    ..aOS(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widgetClassName')
     ..hasRequiredFields = false
   ;
 
@@ -479,6 +522,7 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     $core.Map<$core.String, WidgetClassDebugData>? componentStates,
     $core.Map<$core.String, DynamicWidgetClassDebugData>? dynamicComponentStates,
     $core.String? link,
+    $core.String? searchReference,
     $core.String? widgetClassName,
   }) {
     final _result = create();
@@ -508,6 +552,9 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
     }
     if (link != null) {
       _result.link = link;
+    }
+    if (searchReference != null) {
+      _result.searchReference = searchReference;
     }
     if (widgetClassName != null) {
       _result.widgetClassName = widgetClassName;
@@ -569,13 +616,22 @@ class WidgetClassDebugData extends $pb.GeneratedMessage {
   void clearLink() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.String get widgetClassName => $_getSZ(9);
+  $core.String get searchReference => $_getSZ(9);
   @$pb.TagNumber(10)
-  set widgetClassName($core.String v) { $_setString(9, v); }
+  set searchReference($core.String v) { $_setString(9, v); }
   @$pb.TagNumber(10)
-  $core.bool hasWidgetClassName() => $_has(9);
+  $core.bool hasSearchReference() => $_has(9);
   @$pb.TagNumber(10)
-  void clearWidgetClassName() => clearField(10);
+  void clearSearchReference() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get widgetClassName => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set widgetClassName($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasWidgetClassName() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearWidgetClassName() => clearField(11);
 }
 
 class DynamicWidgetClassDebugData extends $pb.GeneratedMessage {

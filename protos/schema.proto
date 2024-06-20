@@ -29,10 +29,11 @@ message DebugDataField {
     ListDebugDataField list_value = 3;
     MapDebugDataField map_value = 4;
   }
-  string link = 5;
-  string name = 6;
-  bool nullable = 7;
-  bool has_field = 8;
+  string name = 5;
+  string link = 6;
+  string search_reference = 7;
+  bool nullable = 8;
+  bool has_field = 9;
 }
 
 message ListDebugDataField {
@@ -50,11 +51,13 @@ message GlobalPropertyDebugData {
 message AppStateDebugData {
   map<string, DebugDataField> values = 1;
   string link = 2;
+  string search_reference = 3;
 }
 
 message AppConstantDebugData {
   map<string, DebugDataField> values = 1;
   string link = 2;
+  string search_reference = 3;
 }
 
 message AuthenticatedUserDebugData {
@@ -71,7 +74,8 @@ message WidgetClassDebugData {
   map<string, WidgetClassDebugData> component_states = 7;
   map<string, DynamicWidgetClassDebugData> dynamic_component_states = 8;
   string link = 9;
-  string widget_class_name = 10;
+  string search_reference = 10;
+  string widget_class_name = 11;
 }
 
 message DynamicWidgetClassDebugData {
