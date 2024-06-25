@@ -24,6 +24,9 @@ message DebugDataField {
     ACTION = 18;
     WIDGET = 19;
     WIDGET_BUILDER = 20;
+    API_RESPONSE = 21;
+    CLOUD_FUNCTION_RESPONSE = 22;
+    API_RESPONSE_STREAM = 23;
   }
   ParamType type = 1;
   oneof data {

@@ -71,6 +71,9 @@ class DebugDataField_ParamType extends $pb.ProtobufEnum {
   static const DebugDataField_ParamType ACTION = DebugDataField_ParamType._(18, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION');
   static const DebugDataField_ParamType WIDGET = DebugDataField_ParamType._(19, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'WIDGET');
   static const DebugDataField_ParamType WIDGET_BUILDER = DebugDataField_ParamType._(20, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'WIDGET_BUILDER');
+  static const DebugDataField_ParamType API_RESPONSE = DebugDataField_ParamType._(21, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'API_RESPONSE');
+  static const DebugDataField_ParamType CLOUD_FUNCTION_RESPONSE = DebugDataField_ParamType._(22, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CLOUD_FUNCTION_RESPONSE');
+  static const DebugDataField_ParamType API_RESPONSE_STREAM = DebugDataField_ParamType._(23, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'API_RESPONSE_STREAM');
 
   static const $core.List<DebugDataField_ParamType> values = <DebugDataField_ParamType> [
     INT,
@@ -94,6 +97,9 @@ class DebugDataField_ParamType extends $pb.ProtobufEnum {
     ACTION,
     WIDGET,
     WIDGET_BUILDER,
+    API_RESPONSE,
+    CLOUD_FUNCTION_RESPONSE,
+    API_RESPONSE_STREAM,
   ];
 
   static final $core.Map<$core.int, DebugDataField_ParamType> _byValue = $pb.ProtobufEnum.initByValue(values);

@@ -1,3 +1,7 @@
+## 0.1.3
+
+Add more param types
+
 ## 0.1.2
 
 Add two new param types
