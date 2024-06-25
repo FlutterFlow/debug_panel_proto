@@ -69,6 +69,8 @@ class DebugDataField_ParamType extends $pb.ProtobufEnum {
   static const DebugDataField_ParamType POSTGRES_ROW = DebugDataField_ParamType._(16, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'POSTGRES_ROW');
   static const DebugDataField_ParamType SQLITE_ROW = DebugDataField_ParamType._(17, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SQLITE_ROW');
   static const DebugDataField_ParamType ACTION = DebugDataField_ParamType._(18, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ACTION');
+  static const DebugDataField_ParamType WIDGET = DebugDataField_ParamType._(19, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'WIDGET');
+  static const DebugDataField_ParamType WIDGET_BUILDER = DebugDataField_ParamType._(20, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'WIDGET_BUILDER');
 
   static const $core.List<DebugDataField_ParamType> values = <DebugDataField_ParamType> [
     INT,
@@ -90,6 +92,8 @@ class DebugDataField_ParamType extends $pb.ProtobufEnum {
     POSTGRES_ROW,
     SQLITE_ROW,
     ACTION,
+    WIDGET,
+    WIDGET_BUILDER,
   ];
 
   static final $core.Map<$core.int, DebugDataField_ParamType> _byValue = $pb.ProtobufEnum.initByValue(values);

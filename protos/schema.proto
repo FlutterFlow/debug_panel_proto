@@ -22,6 +22,8 @@ message DebugDataField {
     POSTGRES_ROW = 16;
     SQLITE_ROW = 17;
     ACTION = 18;
+    WIDGET = 19;
+    WIDGET_BUILDER = 20;
   }
   ParamType type = 1;
   oneof data {

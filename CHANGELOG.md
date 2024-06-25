@@ -1,3 +1,7 @@
+## 0.1.2
+
+Add two new param types
+
 ## 0.1.1
 
 Add search_reference for certain messages (for searching their usages within FF)
