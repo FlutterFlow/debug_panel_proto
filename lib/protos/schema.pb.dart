@@ -454,6 +454,75 @@ class AppConstantDebugData extends $pb.GeneratedMessage {
   void clearSearchReference() => clearField(3);
 }
 
+class EnvironmentValueDebugData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EnvironmentValueDebugData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..m<$core.String, DebugDataField>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'values', entryClassName: 'EnvironmentValueDebugData.ValuesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'searchReference')
+    ..hasRequiredFields = false
+  ;
+
+  EnvironmentValueDebugData._() : super();
+  factory EnvironmentValueDebugData({
+    $core.Map<$core.String, DebugDataField>? values,
+    $core.String? link,
+    $core.String? searchReference,
+  }) {
+    final _result = create();
+    if (values != null) {
+      _result.values.addAll(values);
+    }
+    if (link != null) {
+      _result.link = link;
+    }
+    if (searchReference != null) {
+      _result.searchReference = searchReference;
+    }
+    return _result;
+  }
+  factory EnvironmentValueDebugData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory EnvironmentValueDebugData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  EnvironmentValueDebugData clone() => EnvironmentValueDebugData()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  EnvironmentValueDebugData copyWith(void Function(EnvironmentValueDebugData) updates) => super.copyWith((message) => updates(message as EnvironmentValueDebugData)) as EnvironmentValueDebugData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static EnvironmentValueDebugData create() => EnvironmentValueDebugData._();
+  EnvironmentValueDebugData createEmptyInstance() => create();
+  static $pb.PbList<EnvironmentValueDebugData> createRepeated() => $pb.PbList<EnvironmentValueDebugData>();
+  @$core.pragma('dart2js:noInline')
+  static EnvironmentValueDebugData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnvironmentValueDebugData>(create);
+  static EnvironmentValueDebugData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, DebugDataField> get values => $_getMap(0);
+
+  @$pb.TagNumber(2)
+  $core.String get link => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set link($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLink() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLink() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get searchReference => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set searchReference($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSearchReference() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSearchReference() => clearField(3);
+}
+
 class AuthenticatedUserDebugData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AuthenticatedUserDebugData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..m<$core.String, DebugDataField>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'values', entryClassName: 'AuthenticatedUserDebugData.ValuesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DebugDataField.create, packageName: const $pb.PackageName('schema'))

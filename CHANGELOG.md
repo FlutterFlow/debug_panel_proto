@@ -1,3 +1,7 @@
+## 0.1.4
+
+Support environment values
+
 ## 0.1.3
 
 Add more param types

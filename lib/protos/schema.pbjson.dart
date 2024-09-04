@@ -186,6 +186,29 @@ const AppConstantDebugData_ValuesEntry$json = const {
 
 /// Descriptor for `AppConstantDebugData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List appConstantDebugDataDescriptor = $convert.base64Decode('ChRBcHBDb25zdGFudERlYnVnRGF0YRJACgZ2YWx1ZXMYASADKAsyKC5zY2hlbWEuQXBwQ29uc3RhbnREZWJ1Z0RhdGEuVmFsdWVzRW50cnlSBnZhbHVlcxISCgRsaW5rGAIgASgJUgRsaW5rEikKEHNlYXJjaF9yZWZlcmVuY2UYAyABKAlSD3NlYXJjaFJlZmVyZW5jZRpRCgtWYWx1ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLnNjaGVtYS5EZWJ1Z0RhdGFGaWVsZFIFdmFsdWU6AjgB');
+@$core.Deprecated('Use environmentValueDebugDataDescriptor instead')
+const EnvironmentValueDebugData$json = const {
+  '1': 'EnvironmentValueDebugData',
+  '2': const [
+    const {'1': 'values', '3': 1, '4': 3, '5': 11, '6': '.schema.EnvironmentValueDebugData.ValuesEntry', '10': 'values'},
+    const {'1': 'link', '3': 2, '4': 1, '5': 9, '10': 'link'},
+    const {'1': 'search_reference', '3': 3, '4': 1, '5': 9, '10': 'searchReference'},
+  ],
+  '3': const [EnvironmentValueDebugData_ValuesEntry$json],
+};
+
+@$core.Deprecated('Use environmentValueDebugDataDescriptor instead')
+const EnvironmentValueDebugData_ValuesEntry$json = const {
+  '1': 'ValuesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.schema.DebugDataField', '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+/// Descriptor for `EnvironmentValueDebugData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List environmentValueDebugDataDescriptor = $convert.base64Decode('ChlFbnZpcm9ubWVudFZhbHVlRGVidWdEYXRhEkUKBnZhbHVlcxgBIAMoCzItLnNjaGVtYS5FbnZpcm9ubWVudFZhbHVlRGVidWdEYXRhLlZhbHVlc0VudHJ5UgZ2YWx1ZXMSEgoEbGluaxgCIAEoCVIEbGluaxIpChBzZWFyY2hfcmVmZXJlbmNlGAMgASgJUg9zZWFyY2hSZWZlcmVuY2UaUQoLVmFsdWVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLAoFdmFsdWUYAiABKAsyFi5zY2hlbWEuRGVidWdEYXRhRmllbGRSBXZhbHVlOgI4AQ==');
 @$core.Deprecated('Use authenticatedUserDebugDataDescriptor instead')
 const AuthenticatedUserDebugData$json = const {
   '1': 'AuthenticatedUserDebugData',

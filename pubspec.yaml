@@ -1,6 +1,6 @@
 name: debug_panel_proto
 description: "A Flutter package that specify the proto schema for debugging FlutterFlow projects."
-version: 0.1.3
+version: 0.1.4
 homepage:
 
 environment:
